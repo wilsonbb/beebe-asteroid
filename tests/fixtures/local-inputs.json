@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/Users/wbeebe/claude/beebe_asteroid/BUILD_PLAN.md",
+    "bytes": 36057,
+    "sha256": "67c9ce207fa7041e247d1a3fb1c768585f77cc6489fdc357380462b3f3825f79"
+  },
+  {
+    "path": "/Users/wbeebe/claude/beebe_asteroid/make_cutouts.py",
+    "bytes": 4536,
+    "sha256": "c32c826ef7677d220ce629a67c7613159722e6bd0b7c0f258ce1bf9d99f49f88"
+  },
+  {
+    "path": "/Users/wbeebe/claude/beebe_asteroid/ztf_matches.ecsv",
+    "bytes": 412062,
+    "sha256": "e458aa7275560933d966a6421247d3e399793efc59001f5e36d3bcf6b916aed8"
+  },
+  {
+    "path": "/Users/wbeebe/claude/beebe_asteroid/Beebe.txt",
+    "bytes": 408078,
+    "sha256": "2bd395fb60109b0f7f88932f316f193263351e517610ff0dbb80edbef5f9fe5f"
+  }
+]
