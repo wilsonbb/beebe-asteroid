@@ -1,0 +1,19 @@
+{
+  "errors": [],
+  "schema_version": 1,
+  "sources": {
+    "horizons": {
+      "last_success": "2026-09-05T22:00:00Z"
+    },
+    "most": {
+      "last_success": "2026-07-14T15:28:01Z",
+      "note": "Imported historical search; current discovery not yet run"
+    },
+    "mpc": {
+      "last_success": "2026-09-05T22:00:00Z"
+    },
+    "sbdb": {
+      "last_success": "2026-09-05T22:00:00Z"
+    }
+  }
+}
