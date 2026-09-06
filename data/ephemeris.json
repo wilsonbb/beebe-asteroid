@@ -1,7 +1,7 @@
 {
   "frame": "ICRF astrometric RA/Dec",
   "observer": "Earth center (500@399)",
-  "retrieved_at": "2026-09-05T22:00:00Z",
+  "retrieved_at": "2026-09-05T23:15:40Z",
   "samples": [
     {
       "at": "2026-09-05T00:00:00Z",
@@ -22,11 +22,301 @@
       "ra": "01 46 44.41",
       "sun_distance_au": 2.993722635232,
       "v_mag": 18.748
+    },
+    {
+      "at": "2026-09-07T00:00:00Z",
+      "dec": "+08 55 00.1",
+      "earth_distance_au": 2.1846160604828,
+      "elongation_deg": 136.0786,
+      "light_minutes": 18.16889775,
+      "ra": "01 46 30.27",
+      "sun_distance_au": 2.993459010955,
+      "v_mag": 18.728
+    },
+    {
+      "at": "2026-09-08T00:00:00Z",
+      "dec": "+08 49 16.8",
+      "earth_distance_au": 2.17497359059064,
+      "elongation_deg": 137.1388,
+      "light_minutes": 18.08870377,
+      "ra": "01 46 14.83",
+      "sun_distance_au": 2.993192305786,
+      "v_mag": 18.709
+    },
+    {
+      "at": "2026-09-09T00:00:00Z",
+      "dec": "+08 43 24.6",
+      "earth_distance_au": 2.16552191315908,
+      "elongation_deg": 138.2052,
+      "light_minutes": 18.01009657,
+      "ra": "01 45 58.09",
+      "sun_distance_au": 2.992922521776,
+      "v_mag": 18.689
+    },
+    {
+      "at": "2026-09-10T00:00:00Z",
+      "dec": "+08 37 23.5",
+      "earth_distance_au": 2.15626593929751,
+      "elongation_deg": 139.2776,
+      "light_minutes": 17.93311698,
+      "ra": "01 45 40.06",
+      "sun_distance_au": 2.992649661002,
+      "v_mag": 18.669
+    },
+    {
+      "at": "2026-09-11T00:00:00Z",
+      "dec": "+08 31 13.7",
+      "earth_distance_au": 2.14721050791373,
+      "elongation_deg": 140.3559,
+      "light_minutes": 17.85780526,
+      "ra": "01 45 20.75",
+      "sun_distance_au": 2.992373725568,
+      "v_mag": 18.649
+    },
+    {
+      "at": "2026-09-12T00:00:00Z",
+      "dec": "+08 24 55.4",
+      "earth_distance_au": 2.13836035350467,
+      "elongation_deg": 141.44,
+      "light_minutes": 17.78420077,
+      "ra": "01 45 00.18",
+      "sun_distance_au": 2.992094717604,
+      "v_mag": 18.629
+    },
+    {
+      "at": "2026-09-13T00:00:00Z",
+      "dec": "+08 18 28.5",
+      "earth_distance_au": 2.12972008512726,
+      "elongation_deg": 142.5298,
+      "light_minutes": 17.71234185,
+      "ra": "01 44 38.36",
+      "sun_distance_au": 2.991812639265,
+      "v_mag": 18.609
+    },
+    {
+      "at": "2026-09-14T00:00:00Z",
+      "dec": "+08 11 53.4",
+      "earth_distance_au": 2.12129417739293,
+      "elongation_deg": 143.6251,
+      "light_minutes": 17.64226571,
+      "ra": "01 44 15.31",
+      "sun_distance_au": 2.991527492734,
+      "v_mag": 18.589
+    },
+    {
+      "at": "2026-09-15T00:00:00Z",
+      "dec": "+08 05 10.2",
+      "earth_distance_au": 2.11308697125839,
+      "elongation_deg": 144.7259,
+      "light_minutes": 17.57400846,
+      "ra": "01 43 51.04",
+      "sun_distance_au": 2.991239280219,
+      "v_mag": 18.568
+    },
+    {
+      "at": "2026-09-16T00:00:00Z",
+      "dec": "+07 58 19.0",
+      "earth_distance_au": 2.10510268064513,
+      "elongation_deg": 145.8319,
+      "light_minutes": 17.50760514,
+      "ra": "01 43 25.58",
+      "sun_distance_au": 2.990948003955,
+      "v_mag": 18.547
+    },
+    {
+      "at": "2026-09-17T00:00:00Z",
+      "dec": "+07 51 20.0",
+      "earth_distance_au": 2.09734540084804,
+      "elongation_deg": 146.943,
+      "light_minutes": 17.44308981,
+      "ra": "01 42 58.95",
+      "sun_distance_au": 2.990653666205,
+      "v_mag": 18.527
+    },
+    {
+      "at": "2026-09-18T00:00:00Z",
+      "dec": "+07 44 13.6",
+      "earth_distance_au": 2.0898191157744,
+      "elongation_deg": 148.059,
+      "light_minutes": 17.3804956,
+      "ra": "01 42 31.16",
+      "sun_distance_au": 2.990356269257,
+      "v_mag": 18.506
+    },
+    {
+      "at": "2026-09-19T00:00:00Z",
+      "dec": "+07 36 59.7",
+      "earth_distance_au": 2.08252770250744,
+      "elongation_deg": 149.1797,
+      "light_minutes": 17.31985477,
+      "ra": "01 42 02.26",
+      "sun_distance_au": 2.990055815425,
+      "v_mag": 18.485
+    },
+    {
+      "at": "2026-09-20T00:00:00Z",
+      "dec": "+07 29 38.8",
+      "earth_distance_au": 2.07547493297459,
+      "elongation_deg": 150.3048,
+      "light_minutes": 17.26119867,
+      "ra": "01 41 32.24",
+      "sun_distance_au": 2.989752307052,
+      "v_mag": 18.464
+    },
+    {
+      "at": "2026-09-21T00:00:00Z",
+      "dec": "+07 22 10.9",
+      "earth_distance_au": 2.06866447342342,
+      "elongation_deg": 151.4343,
+      "light_minutes": 17.20455781,
+      "ra": "01 41 01.16",
+      "sun_distance_au": 2.989445746506,
+      "v_mag": 18.442
+    },
+    {
+      "at": "2026-09-22T00:00:00Z",
+      "dec": "+07 14 36.4",
+      "earth_distance_au": 2.06209988300478,
+      "elongation_deg": 152.5676,
+      "light_minutes": 17.14996177,
+      "ra": "01 40 29.02",
+      "sun_distance_au": 2.989136136182,
+      "v_mag": 18.421
+    },
+    {
+      "at": "2026-09-23T00:00:00Z",
+      "dec": "+07 06 55.5",
+      "earth_distance_au": 2.05578461312036,
+      "elongation_deg": 153.7047,
+      "light_minutes": 17.09743927,
+      "ra": "01 39 55.87",
+      "sun_distance_au": 2.988823478502,
+      "v_mag": 18.4
+    },
+    {
+      "at": "2026-09-24T00:00:00Z",
+      "dec": "+06 59 08.5",
+      "earth_distance_au": 2.04972200933105,
+      "elongation_deg": 154.8451,
+      "light_minutes": 17.04701814,
+      "ra": "01 39 21.73",
+      "sun_distance_au": 2.988507775915,
+      "v_mag": 18.378
+    },
+    {
+      "at": "2026-09-25T00:00:00Z",
+      "dec": "+06 51 15.6",
+      "earth_distance_au": 2.04391531745008,
+      "elongation_deg": 155.9886,
+      "light_minutes": 16.99872535,
+      "ra": "01 38 46.63",
+      "sun_distance_au": 2.988189030896,
+      "v_mag": 18.356
+    },
+    {
+      "at": "2026-09-26T00:00:00Z",
+      "dec": "+06 43 17.1",
+      "earth_distance_au": 2.03836769477659,
+      "elongation_deg": 157.1346,
+      "light_minutes": 16.95258718,
+      "ra": "01 38 10.60",
+      "sun_distance_au": 2.987867245949,
+      "v_mag": 18.334
+    },
+    {
+      "at": "2026-09-27T00:00:00Z",
+      "dec": "+06 35 13.3",
+      "earth_distance_au": 2.03308222612434,
+      "elongation_deg": 158.2827,
+      "light_minutes": 16.90862928,
+      "ra": "01 37 33.67",
+      "sun_distance_au": 2.987542423602,
+      "v_mag": 18.312
+    },
+    {
+      "at": "2026-09-28T00:00:00Z",
+      "dec": "+06 27 04.5",
+      "earth_distance_au": 2.02806194248593,
+      "elongation_deg": 159.4324,
+      "light_minutes": 16.86687685,
+      "ra": "01 36 55.89",
+      "sun_distance_au": 2.987214566413,
+      "v_mag": 18.289
+    },
+    {
+      "at": "2026-09-29T00:00:00Z",
+      "dec": "+06 18 51.0",
+      "earth_distance_au": 2.02330983839607,
+      "elongation_deg": 160.583,
+      "light_minutes": 16.82735481,
+      "ra": "01 36 17.28",
+      "sun_distance_au": 2.986883676964,
+      "v_mag": 18.267
+    },
+    {
+      "at": "2026-09-30T00:00:00Z",
+      "dec": "+06 10 33.1",
+      "earth_distance_au": 2.01882888318438,
+      "elongation_deg": 161.7336,
+      "light_minutes": 16.79008784,
+      "ra": "01 35 37.88",
+      "sun_distance_au": 2.986549757867,
+      "v_mag": 18.244
+    },
+    {
+      "at": "2026-10-01T00:00:00Z",
+      "dec": "+06 02 11.1",
+      "earth_distance_au": 2.01462202201954,
+      "elongation_deg": 162.8834,
+      "light_minutes": 16.75510044,
+      "ra": "01 34 57.72",
+      "sun_distance_au": 2.986212811759,
+      "v_mag": 18.221
+    },
+    {
+      "at": "2026-10-02T00:00:00Z",
+      "dec": "+05 53 45.4",
+      "earth_distance_au": 2.01069216484157,
+      "elongation_deg": 164.031,
+      "light_minutes": 16.72241682,
+      "ra": "01 34 16.85",
+      "sun_distance_au": 2.985872841305,
+      "v_mag": 18.198
+    },
+    {
+      "at": "2026-10-03T00:00:00Z",
+      "dec": "+05 45 16.4",
+      "earth_distance_au": 2.00704216399625,
+      "elongation_deg": 165.1749,
+      "light_minutes": 16.69206069,
+      "ra": "01 33 35.31",
+      "sun_distance_au": 2.985529849197,
+      "v_mag": 18.174
+    },
+    {
+      "at": "2026-10-04T00:00:00Z",
+      "dec": "+05 36 44.4",
+      "earth_distance_au": 2.00367478342935,
+      "elongation_deg": 166.3129,
+      "light_minutes": 16.66405504,
+      "ra": "01 32 53.13",
+      "sun_distance_au": 2.985183838154,
+      "v_mag": 18.15
+    },
+    {
+      "at": "2026-10-05T00:00:00Z",
+      "dec": "+05 28 09.8",
+      "earth_distance_au": 2.00059266306091,
+      "elongation_deg": 167.4425,
+      "light_minutes": 16.63842182,
+      "ra": "01 32 10.37",
+      "sun_distance_au": 2.984834810922,
+      "v_mag": 18.126
     }
   ],
   "schema_version": 1,
   "source": "https://ssd.jpl.nasa.gov/horizons/",
   "time_scale": "UTC",
   "valid_from": "2026-09-05T00:00:00Z",
-  "valid_until": "2026-09-07T00:00:00Z"
+  "valid_until": "2026-10-06T00:00:00Z"
 }

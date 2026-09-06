@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "night",
+      "revision",
+      "frames",
+      "poster",
+      "gif",
+      "published_at",
+      "updated_at",
+      "n_frames",
+      "wcs",
+      "visibility"
+    ],
+    "properties": {
+      "night": {
+        "type": "string",
+        "format": "date"
+      },
+      "n_frames": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "frames": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "at",
+            "band",
+            "asset",
+            "marker",
+            "source_url"
+          ],
+          "properties": {
+            "marker": {
+              "type": "object",
+              "required": [
+                "x",
+                "y"
+              ],
+              "properties": {
+                "x": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "y": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "published_at": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "updated_at": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "visibility": {
+        "enum": [
+          "unreviewed",
+          "visually_confirmed",
+          "unclear"
+        ]
+      }
+    }
+  }
+}

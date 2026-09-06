@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "observed_at",
+      "night",
+      "band",
+      "availability",
+      "quality",
+      "visibility",
+      "source_url",
+      "published_at",
+      "assets",
+      "attempts"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^ztf_"
+      },
+      "observed_at": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "night": {
+        "type": "string",
+        "format": "date"
+      },
+      "band": {
+        "enum": [
+          "g",
+          "r",
+          "i",
+          "?"
+        ]
+      },
+      "availability": {
+        "enum": [
+          "untried",
+          "available",
+          "pending",
+          "restricted",
+          "retryable_error",
+          "invalid"
+        ]
+      },
+      "quality": {
+        "enum": [
+          "unprocessed",
+          "passed",
+          "rejected"
+        ]
+      },
+      "visibility": {
+        "enum": [
+          "unreviewed",
+          "visually_confirmed",
+          "unclear"
+        ]
+      },
+      "source_url": {
+        "type": "string",
+        "pattern": "^https://irsa.ipac.caltech.edu/ibe/data/ztf/"
+      },
+      "published_at": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "assets": {
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "attempts": {
+        "type": "integer",
+        "minimum": 0
+      }
+    }
+  }
+}

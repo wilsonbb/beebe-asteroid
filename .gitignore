@@ -43,3 +43,5 @@ __pycache__/
 out/
 *.pyc
 work/
+*.tsbuildinfo
+public/data/

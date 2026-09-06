@@ -1,0 +1,7 @@
+astropy==8.0.1
+numpy==2.5.1
+Pillow==12.3.0
+requests==2.34.2
+reproject==0.21.0
+jsonschema==4.26.0
+pytest==9.1.1
