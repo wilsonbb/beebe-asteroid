@@ -128,7 +128,7 @@ export default function Sources() {
             {Object.entries(status.sources).map(([name, s]) => (
               <div key={name}>
                 <dt>{name.toUpperCase()}</dt>
-                <dd>{s.last_success || 'No successful update yet'}</dd>
+                <dd>{'last_success' in s ? s.last_success : 'No successful update yet'}</dd>
               </div>
             ))}
           </dl>
