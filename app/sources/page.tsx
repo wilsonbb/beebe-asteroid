@@ -7,15 +7,16 @@ export default function Sources() {
     <div className="site-shell">
       <Header />
       <main id="main" className="methods-page">
-        <p className="eyebrow">FOLLOW THE EVIDENCE</p>
+        <p className="eyebrow">SOURCES & DETAILS</p>
         <h1>
-          Real light.
+          Where the photos
           <br />
-          <em>Clear provenance.</em>
+          <em>and facts come from.</em>
         </h1>
         <p className="lede">
-          The journal brings together public astronomy records and telescope
-          images. Every picture starts with an actual exposure.
+          The photos and facts come from public astronomy archives. Here are the
+          original sources, how the pictures are prepared, and when the
+          information was last updated.
         </p>
         <section>
           <h2>The sources</h2>
@@ -116,7 +117,7 @@ export default function Sources() {
           <p>
             ZTF documents a rolling release window of about 60 days for public
             images; proprietary images take longer. Availability varies. A newly
-            added journal entry can therefore contain much older observations.
+            added photo can therefore contain much older observations.
           </p>
           <a
             href="https://www.ztf.caltech.edu/ztf-public-releases.html"
@@ -128,7 +129,11 @@ export default function Sources() {
             {Object.entries(status.sources).map(([name, s]) => (
               <div key={name}>
                 <dt>{name.toUpperCase()}</dt>
-                <dd>{'last_success' in s ? s.last_success : 'No successful update yet'}</dd>
+                <dd>
+                  {'last_success' in s
+                    ? s.last_success
+                    : 'No successful update yet'}
+                </dd>
               </div>
             ))}
           </dl>

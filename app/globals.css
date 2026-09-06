@@ -121,7 +121,7 @@ h3 {
   letter-spacing: -0.045em;
 }
 h1 {
-  font-size: clamp(48px, 5.5vw, 76px);
+  font-size: clamp(48px, 5vw, 68px);
   margin: 0 0 30px;
 }
 h1 em {
@@ -806,7 +806,7 @@ blockquote {
 }
 .closing h2 {
   margin: 20px 0 22px;
-  font-size: 52px;
+  font-size: 42px;
 }
 .closing p {
   font-size: 16px;
@@ -1373,4 +1373,12 @@ blockquote {
 }
 .sky-image:focus-within {
   outline: 2px solid var(--primary);
+}
+
+/* Plain-language family preview; keep the original palette and photo layout. */
+.hero-copy > p.hero-help {
+  font-size: 15px;
+  line-height: 1.65;
+  margin-top: 24px;
+  max-width: 340px;
 }

@@ -7,13 +7,13 @@ export function Footer() {
           (20220) <b>BEEBE</b>
         </a>
         <p>
-          A field journal for a small world.
+          An asteroid with a familiar name.
           <br />
-          Real observations. An unfolding story.
+          A few photos and things to learn.
         </p>
       </div>
       <div>
-        <p className="eyebrow">FOLLOW THE EVIDENCE</p>
+        <p className="eyebrow">SOURCES & DETAILS</p>
         <div className="source-links">
           <a href="https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=20220">
             JPL ↗

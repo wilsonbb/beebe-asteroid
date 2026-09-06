@@ -12,7 +12,7 @@ export async function generateMetadata({
   params: Promise<{ night: string }>;
 }) {
   const { night } = await params;
-  return { title: `${night} — Beebe observing journal` };
+  return { title: `${night} — Beebe telescope photos` };
 }
 export default async function Page({
   params,
@@ -34,8 +34,8 @@ export default async function Page({
             <p className="eyebrow">ZTF / SAMUEL OSCHIN TELESCOPE</p>
             <h1>{dateLabel(s.night)}</h1>
             <p>
-              {s.n_frames} exposures across {s.span_minutes} minutes. A small
-              part of Beebe’s journey, recorded from Palomar Observatory.
+              {s.n_frames} telescope photos taken over {s.span_minutes} minutes
+              at Palomar Observatory.
             </p>
             <dl className="night-facts">
               <div>
@@ -47,7 +47,7 @@ export default async function Page({
                 <dd>{s.field_arcsec} arcseconds</dd>
               </div>
               <div>
-                <dt>Added to the journal</dt>
+                <dt>Added to this site</dt>
                 <dd>{dateLabel(s.published_at)}</dd>
               </div>
               <div>

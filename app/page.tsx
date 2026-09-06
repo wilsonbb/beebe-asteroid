@@ -33,26 +33,23 @@ export default function Home() {
       <main id="main">
         <section className="hero" id="watch">
           <div className="hero-copy">
-            <p className="eyebrow">A FIELD JOURNAL FROM THE ASTEROID BELT</p>
+            <p className="eyebrow">FOR FAMILY, FRIENDS & THE CURIOUS</p>
             <h1>
-              A small world.
+              An asteroid
               <br />
-              <em>Still in motion.</em>
+              <em>named Beebe.</em>
             </h1>
             <p>
-              Discovered in 1997. Named Beebe in 2026. Follow a small world
-              between Mars and Jupiter through real telescope images.
+              In 2026, an asteroid was named after Wilson Beebe. This is a place
+              for family and friends to see it in telescope photos and learn a
+              little about it.
             </p>
-            <div className="hero-annotation">
-              <span className="annotation-line" />
-              <p>
-                That little point of light
-                <br />
-                has a story to tell.
-              </p>
-            </div>
+            <p className="hero-help">
+              Press play to compare the photos. The circle shows where Beebe is
+              expected to be.
+            </p>
             <a className="text-link" href="#story">
-              Meet (20220) Beebe <ArrowUpRight size={16} />
+              How it got the name <ArrowUpRight size={16} />
             </a>
           </div>
           <div>
@@ -68,7 +65,7 @@ export default function Home() {
         </section>
         <div className="fact-strip">
           <div>
-            <span>AT HOME IN</span>
+            <span>WHERE IT ORBITS</span>
             <strong>The main asteroid belt</strong>
           </div>
           <div>
@@ -78,7 +75,7 @@ export default function Home() {
             </strong>
           </div>
           <div>
-            <span>A NEW NAME SINCE</span>
+            <span>NAMED ON</span>
             <strong>9 July 2026</strong>
           </div>
         </div>
@@ -88,17 +85,17 @@ export default function Home() {
         >
           <div className="section-heading">
             <div>
-              <p className="eyebrow">THE OBSERVING JOURNAL</p>
-              <h2 id="additions-title">Small moments. Real motion.</h2>
+              <p className="eyebrow">RECENTLY ADDED</p>
+              <h2 id="additions-title">More telescope photos</h2>
             </div>
             <a className="text-link" href={href('/archive/')}>
               Explore the archive <ArrowUpRight size={16} />
             </a>
           </div>
           <p className="section-intro">
-            Newly available images join the journal as public archives release
-            them. The observing date tells you when the light was captured; the
-            added date tells you when it arrived here.
+            New photos are added as they become available. The observing date is
+            when the telescope took the photo; the added date is when it
+            appeared on this site.
           </p>
           <div className="journal-grid">
             {recent.map((s) => (
@@ -133,15 +130,15 @@ export default function Home() {
         </section>
         <section className="section story-section" id="story">
           <div className="story-heading">
-            <p className="eyebrow">01 / A NAME IN THE SKY</p>
+            <p className="eyebrow">WHY BEEBE?</p>
             <h2>
-              Known for decades.
+              How it got
               <br />
-              <em>Named for discovery.</em>
+              <em>the name.</em>
             </h2>
             <p>
-              Beebe’s name connects a small asteroid to the search for much more
-              distant worlds.
+              The asteroid was discovered in 1997 and received its name in 2026.
+              The name recognizes Wilson’s work on software for astronomy.
             </p>
             <a
               className="text-link"
@@ -153,7 +150,7 @@ export default function Home() {
           <div className="timeline">
             <article>
               <time>07 APR 1992</time>
-              <h3>Already in the picture</h3>
+              <h3>An earlier photo</h3>
               <p>
                 The earliest observation now associated with Beebe predates its
                 discovery by five years. An earlier observation linked to an
@@ -162,7 +159,7 @@ export default function Home() {
             </article>
             <article>
               <time>07 APR 1997</time>
-              <h3>A world is discovered</h3>
+              <h3>Discovery</h3>
               <p>
                 Eric W. Elst discovered the asteroid at La Silla Observatory in
                 Chile. Its first designation was{' '}
@@ -171,7 +168,7 @@ export default function Home() {
             </article>
             <article>
               <time>09 JUL 2026</time>
-              <h3>And a name finds it</h3>
+              <h3>Named Beebe</h3>
               <p>
                 The name honors Wilson Beebe, whose software helps find faint
                 objects beyond Neptune by aligning and adding survey images—a
@@ -190,16 +187,16 @@ export default function Home() {
         <section className="section" id="science">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">02 / GETTING TO KNOW A SMALL WORLD</p>
+              <p className="eyebrow">ABOUT THE ASTEROID</p>
               <h2>
-                Far away.
+                What kind of
                 <br />
-                <em>Remarkably knowable.</em>
+                <em>asteroid is it?</em>
               </h2>
             </div>
             <p className="heading-aside">
-              We know much more about Beebe’s orbit than its surface. Both the
-              answers and the open questions are part of the science.
+              Beebe is one of many asteroids between Mars and Jupiter. Its name
+              gives us a good reason to learn about one of them.
             </p>
           </div>
           <div className="orbit-layout">
@@ -226,19 +223,19 @@ export default function Home() {
                 </div>
               </div>
               <p className="small-copy">
-                Despite its name’s connection to research beyond Neptune, Beebe
-                itself lives in the main asteroid belt.
+                One astronomical unit (au) is about the distance from Earth to
+                the Sun. It is a handy unit for these very large distances.
               </p>
             </div>
           </div>
           <SizeExplorer h={H} />
           <div className="science-pair">
             <div className="spin-note">
-              <p className="eyebrow">AN OPEN QUESTION</p>
+              <p className="eyebrow">ITS SPIN</p>
               <h3>
-                A day in
+                How quickly
                 <br />
-                about three hours?
+                does it spin?
               </h3>
               <p>
                 A published lightcurve suggests Beebe rotates once in about 3
@@ -258,8 +255,7 @@ export default function Home() {
           </div>
           <details className="technical">
             <summary>
-              For the scientifically curious{' '}
-              <span>Elements, uncertainties & the observation record</span>
+              Want the numbers? <span>Orbit details & observation records</span>
             </summary>
             <div className="technical-inner">
               <h3>The orbit, with its context</h3>
@@ -330,15 +326,14 @@ export default function Home() {
           </details>
         </section>
         <section className="closing">
-          <span className="eyebrow">THE STORY KEEPS MOVING</span>
-          <h2>
-            Another night.
-            <br />
-            Another point of light.
-          </h2>
-          <p>Explore the images that bring Beebe’s journey into view.</p>
+          <span className="eyebrow">THE PHOTO COLLECTION</span>
+          <h2>Have a look through the photos.</h2>
+          <p>
+            Choose a date to view the photos, play a sequence, or download a
+            copy.
+          </p>
           <a className="primary-link" href={href('/archive/')}>
-            Open the observing journal <ArrowUpRight size={16} />
+            Browse telescope photos <ArrowUpRight size={16} />
           </a>
         </section>
       </main>

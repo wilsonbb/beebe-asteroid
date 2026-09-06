@@ -1,5 +1,5 @@
 import { ArchivePage } from '@/components/archive-page';
-export const metadata = { title: 'The observing journal — Beebe' };
+export const metadata = { title: 'Telescope photos — Beebe' };
 export default function Page() {
   return <ArchivePage />;
 }

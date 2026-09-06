@@ -8,15 +8,12 @@ export function SizeExplorer({ h }: { h: number }) {
   return (
     <div className="size-explorer">
       <div>
-        <p className="eyebrow">A QUESTION OF REFLECTIVITY</p>
-        <h3>
-          How big is a<br />
-          point of light?
-        </h3>
+        <p className="eyebrow">SIZE</p>
+        <h3>How big is it?</h3>
         <p>
-          The same light could come from a small bright surface or a larger dark
-          one. Change the assumed reflectivity to see why size is still a
-          question.
+          We don’t have a measured diameter. A size estimate depends on how much
+          sunlight its surface reflects. Try the slider: a darker asteroid would
+          need to be bigger to look as bright.
         </p>
         <label id="reflectivity-label">
           Assumed reflectivity <strong>{Math.round(p * 100)}%</strong>
@@ -98,7 +95,7 @@ export function Prediction({
   const sample = samples.find((s) => s.at.startsWith(day)) || samples.at(-1)!;
   return (
     <div className="prediction">
-      <p className="eyebrow">A POSITION, NOT A LIVE PICTURE</p>
+      <p className="eyebrow">DISTANCE FROM EARTH</p>
       <h3>Where is Beebe?</h3>
       <p>
         Prediction for{' '}

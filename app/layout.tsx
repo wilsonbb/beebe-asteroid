@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
 export const metadata: Metadata = {
-  title: 'Beebe — a small world in motion',
+  title: 'An asteroid named Beebe',
   description:
-    'Meet asteroid (20220) Beebe. Explore real telescope images, its discovery and naming, and the science of a small world between Mars and Jupiter.',
+    'Telescope photos and a few facts about (20220) Beebe, the asteroid named after Wilson Beebe. A place for family, friends, and anyone curious.',
 };
 export default function RootLayout({
   children,

@@ -13,7 +13,7 @@ export function Header() {
       <nav aria-label="Main navigation">
         <a href={href('/#watch')}>Watch</a>
         <a href={href('/#story')}>Story</a>
-        <a href={href('/#science')}>Science</a>
+        <a href={href('/#science')}>About</a>
         <a href={href('/archive/')}>Archive ↗</a>
       </nav>
     </header>

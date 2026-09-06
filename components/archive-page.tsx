@@ -9,20 +9,21 @@ export function ArchivePage({ page = 1 }: { page?: number }) {
       <Header />
       <main id="main">
         <section className="archive-heading">
-          <p className="eyebrow">THE OBSERVING JOURNAL</p>
+          <p className="eyebrow">THE PHOTO COLLECTION</p>
           <h1>
-            One world.
+            Browse the
             <br />
-            <em>Many nights.</em>
+            <em>telescope photos.</em>
           </h1>
           <p>
-            Real telescope images of Beebe’s predicted path. {sequences.length}{' '}
-            nights have processed images; the rest remain in the work queue or
-            await public pixels.
+            Telescope photos of the sky where Beebe was expected to be.{' '}
+            {sequences.length} nights have photos ready to view. The other
+            nights are waiting for processing or for the archive to make the
+            images available.
           </p>
           <p className="small-copy">
-            An archive match means an exposure covers the predicted position. It
-            does not, on its own, confirm a detection.
+            The circle marks the expected position. Beebe may be faint or hard
+            to pick out in an individual photo.
           </p>
         </section>
         <ArchiveBrowser nights={nights} initialPage={page} />
