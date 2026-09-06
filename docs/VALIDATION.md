@@ -34,3 +34,14 @@ The earlier Vinext export configuration redirected trailing-slash routes during 
 ## Deliberate limits
 
 GitHub Pages and scheduled refresh are configured in `wilsonbb/beebe-asteroid`. The separate Sites preview upload failed with service timeouts; only its source backup succeeded. Current quality filtering validates pixels and common sky coverage; it does not automatically identify the asteroid, measure a lightcurve, or certify astrometric registration accuracy. Seasonal opposition predictions and other survey integrations remain deferred as in the build brief.
+
+## GitHub production activation — 6 September 2026
+
+- Repository: https://github.com/wilsonbb/beebe-asteroid
+- Public site: https://wilsonbb.github.io/beebe-asteroid/
+- Pages uses Actions, with `PAGES_BASE_PATH=/beebe-asteroid`; the refresh workflow is active.
+- The first scheduled fast refresh updated and committed data, but its Pages step preceded Pages enablement and failed. This was a configuration interruption, not a validation failure.
+- [Full refresh and publish run 34044732524](https://github.com/wilsonbb/beebe-asteroid/actions/runs/34044732524) then succeeded: 12 cutout attempts, four newly rendered exposures, 1,089 candidates, 13 rendered nights, 30 media assets, and zero astronomy-source warnings. These counts describe this run.
+- All 15 Python tests, five TypeScript tests, typechecking, linting, production build, and the static-link check passed in GitHub. The exported `/beebe-asteroid` artifact contained 76 HTML documents with resolving local links. The independent CI run also succeeded.
+- The deployed homepage loaded in the browser. Frame stepping advanced the timestamp and band; the permanent November 16 archive page loaded all five displayed images. Browser error logs were empty during the player check.
+- Scheduled execution is best effort. Check the linked run history and source timestamps rather than treating the configured schedule as proof that a future run succeeded.
