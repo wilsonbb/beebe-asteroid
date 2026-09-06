@@ -9,15 +9,28 @@
     "render: ValueError: No usable pixels at predicted positions",
     "render: ValueError: No usable pixels at predicted positions",
     "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions",
     "render: ValueError: No usable pixels at predicted positions"
   ],
   "imaging": {
-    "new_frames": 383,
-    "pending": 176,
-    "queued": 469,
-    "requests": 500
+    "new_frames": 269,
+    "pending": 335,
+    "queued": 41,
+    "requests": 488
   },
-  "last_run": "2026-09-06T16:36:46Z",
+  "last_run": "2026-09-06T21:47:08Z",
   "schema_version": 1,
   "sources": {
     "horizons": {
@@ -25,8 +38,8 @@
       "last_success": "2026-09-06T16:13:50Z"
     },
     "most": {
-      "last_attempt": "2026-09-06T16:36:46Z",
-      "last_success": "2026-09-06T16:36:46Z"
+      "last_attempt": "2026-09-06T21:47:08Z",
+      "last_success": "2026-09-06T21:47:08Z"
     },
     "mpc": {
       "last_attempt": "2026-09-06T16:13:50Z",
@@ -34,7 +47,7 @@
     },
     "render": {
       "error": "No usable pixels at predicted positions",
-      "last_attempt": "2026-09-06T16:36:46Z"
+      "last_attempt": "2026-09-06T21:47:08Z"
     },
     "sbdb": {
       "last_attempt": "2026-09-06T16:13:50Z",
