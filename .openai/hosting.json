@@ -3,6 +3,6 @@
   "r2": null,
   "project_id": "appgprj_6a9c9e4e02c08191b35127d95c78f1f2",
   "static": {
-    "directory": "out"
+    "directory": "dist/client"
   }
 }

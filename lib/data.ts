@@ -6,6 +6,16 @@ import status from '@/data/status.json';
 export { object, observations, ephemeris, sequences, status };
 export type Sequence = (typeof sequences)[number];
 export const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
-export const href = (path:string) => `${base}${path}`;
-export const dateLabel = (date:string,short=false) => new Date(date.length===10?`${date}T12:00:00Z`:date).toLocaleDateString('en-GB',{day:'numeric',month:short?'short':'long',year:'numeric',timeZone:'UTC'});
-export const featured = sequences.find(s=>s.night==='2022-11-16') || sequences[0];
+export const href = (path: string) => `${base}${path}`;
+export const dateLabel = (date: string, short = false) =>
+  new Date(date.length === 10 ? `${date}T12:00:00Z` : date).toLocaleDateString(
+    'en-GB',
+    {
+      day: 'numeric',
+      month: short ? 'short' : 'long',
+      year: 'numeric',
+      timeZone: 'UTC',
+    },
+  );
+export const featured =
+  sequences.find((s) => s.night === '2022-11-16') || sequences[0];

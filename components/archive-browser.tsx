@@ -1,14 +1,201 @@
 'use client';
-import {useMemo,useState} from 'react';
-import {ArrowUpRight,Clock,ImageIcon} from 'lucide-react';
-import {NativeSelect,NativeSelectOption} from '@/components/ui/native-select';
-import {Pagination,PaginationContent,PaginationItem,PaginationLink} from '@/components/ui/pagination';
-import {filterNights,PAGE_SIZE,type Night} from '@/lib/archive';
-const base=process.env.NEXT_PUBLIC_BASE_PATH||'';
-export function ArchiveBrowser({nights,initialPage=1}:{nights:Night[];initialPage?:number}){const[year,setYear]=useState('all'),[band,setBand]=useState('all'),[availability,setAvailability]=useState('all'),[sort,setSort]=useState('added'),[page,setPage]=useState(initialPage);
- const results=useMemo(()=>filterNights(nights,year,band,availability,sort),[nights,year,band,availability,sort]);const pages=Math.max(1,Math.ceil(results.length/PAGE_SIZE));const current=Math.min(page,pages);const visible=results.slice((current-1)*PAGE_SIZE,current*PAGE_SIZE);
- const change=(setter:(v:string)=>void,value:string)=>{setter(value);setPage(1)};
- const pageHref=(n:number)=>base+(n===1?'/archive/':`/archive/page/${n}/`);
- return <><div className="archive-filters"><label>Year<NativeSelect aria-label="Filter by year" value={year} onChange={e=>change(setYear,e.target.value)}><NativeSelectOption value="all">All years</NativeSelectOption>{[...new Set(nights.map(n=>n.night.slice(0,4)))].sort().reverse().map(y=><NativeSelectOption key={y}>{y}</NativeSelectOption>)}</NativeSelect></label><label>Filter band<NativeSelect aria-label="Filter by band" value={band} onChange={e=>change(setBand,e.target.value)}><NativeSelectOption value="all">All bands</NativeSelectOption>{['g','r','i'].map(b=><NativeSelectOption key={b}>{b}</NativeSelectOption>)}</NativeSelect></label><label>Availability<NativeSelect aria-label="Filter by availability" value={availability} onChange={e=>change(setAvailability,e.target.value)}><NativeSelectOption value="all">All archive matches</NativeSelectOption><NativeSelectOption value="available">Images available</NativeSelectOption><NativeSelectOption value="awaiting">Without images</NativeSelectOption></NativeSelect></label><label className="sort-filter">Sort by<NativeSelect aria-label="Sort archive" value={sort} onChange={e=>change(setSort,e.target.value)}><NativeSelectOption value="added">Recently added</NativeSelectOption><NativeSelectOption value="observed">Date observed</NativeSelectOption></NativeSelect></label></div><p className="archive-count" aria-live="polite">{results.length} observing nights · Page {current} of {pages}</p><div className="archive-grid">{visible.map(n=><article key={n.night} className={`archive-card ${n.poster?'':'awaiting-card'}`}>
- {n.poster?<a href={`${base}/archive/${n.night}/`}><div className="archive-thumb"><img src={base+n.poster} width="360" height="360" loading="lazy" alt={`Star field recorded on ${n.night}`}/><span>{n.n_frames>=3?'▶ Watch sequence':'View exposures'} <ArrowUpRight size={12}/></span></div><h2>{n.night}</h2></a>:<><div className="awaiting-thumb">{n.availability==='pending'?<Clock size={24}/>:<ImageIcon size={24}/>}<span>{n.availability==='pending'?'Image not yet available':'Awaiting image processing'}</span></div><h2>{n.night}</h2></>}
- <p>{n.count} archive matches · {n.bands.sort().join(' / ')} bands</p><small>{n.published_at?`Added ${n.published_at.slice(0,10)}`:n.availability==='pending'?'Public pixels will be checked again':'Predicted coverage · no detection claimed'}</small></article>)}</div>{results.length===0&&<div className="empty-state"><h2>No nights match these filters.</h2><p>Try another year, band, or availability.</p></div>}<Pagination className="archive-pagination"><PaginationContent>{Array.from({length:pages},(_,i)=>i+1).filter(n=>n===1||n===pages||Math.abs(n-current)<=2).map(n=><PaginationItem key={n}><PaginationLink className="page-link" href={pageHref(n)} isActive={n===current} onClick={e=>{e.preventDefault();setPage(n);document.querySelector('.archive-filters')?.scrollIntoView({block:'start'})}}>{n}</PaginationLink></PaginationItem>)}</PaginationContent></Pagination></>}
+import { useMemo, useState } from 'react';
+import { ArrowUpRight, Clock, ImageIcon } from 'lucide-react';
+import {
+  NativeSelect,
+  NativeSelectOption,
+} from '@/components/ui/native-select';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+} from '@/components/ui/pagination';
+import { filterNights, PAGE_SIZE, type Night } from '@/lib/archive';
+const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
+export function ArchiveBrowser({
+  nights,
+  initialPage = 1,
+}: {
+  nights: Night[];
+  initialPage?: number;
+}) {
+  const [year, setYear] = useState('all'),
+    [band, setBand] = useState('all'),
+    [availability, setAvailability] = useState('all'),
+    [sort, setSort] = useState('added'),
+    [page, setPage] = useState(initialPage);
+  const results = useMemo(
+    () => filterNights(nights, year, band, availability, sort),
+    [nights, year, band, availability, sort],
+  );
+  const pages = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
+  const current = Math.min(page, pages);
+  const visible = results.slice((current - 1) * PAGE_SIZE, current * PAGE_SIZE);
+  const change = (setter: (v: string) => void, value: string) => {
+    setter(value);
+    setPage(1);
+  };
+  const pageHref = (n: number) =>
+    base + (n === 1 ? '/archive/' : `/archive/page/${n}/`);
+  return (
+    <>
+      <div className="archive-filters">
+        <label htmlFor="archive-year">
+          Year
+          <NativeSelect
+            id="archive-year"
+            aria-label="Filter by year"
+            value={year}
+            onChange={(e) => change(setYear, e.target.value)}
+          >
+            <NativeSelectOption value="all">All years</NativeSelectOption>
+            {[...new Set(nights.map((n) => n.night.slice(0, 4)))]
+              .sort()
+              .reverse()
+              .map((y) => (
+                <NativeSelectOption key={y}>{y}</NativeSelectOption>
+              ))}
+          </NativeSelect>
+        </label>
+        <label htmlFor="archive-band">
+          Filter band
+          <NativeSelect
+            id="archive-band"
+            aria-label="Filter by band"
+            value={band}
+            onChange={(e) => change(setBand, e.target.value)}
+          >
+            <NativeSelectOption value="all">All bands</NativeSelectOption>
+            {['g', 'r', 'i'].map((b) => (
+              <NativeSelectOption key={b}>{b}</NativeSelectOption>
+            ))}
+          </NativeSelect>
+        </label>
+        <label htmlFor="archive-availability">
+          Availability
+          <NativeSelect
+            id="archive-availability"
+            aria-label="Filter by availability"
+            value={availability}
+            onChange={(e) => change(setAvailability, e.target.value)}
+          >
+            <NativeSelectOption value="all">
+              All archive matches
+            </NativeSelectOption>
+            <NativeSelectOption value="available">
+              Images available
+            </NativeSelectOption>
+            <NativeSelectOption value="awaiting">
+              Without images
+            </NativeSelectOption>
+          </NativeSelect>
+        </label>
+        <label className="sort-filter" htmlFor="archive-sort">
+          Sort by
+          <NativeSelect
+            id="archive-sort"
+            aria-label="Sort archive"
+            value={sort}
+            onChange={(e) => change(setSort, e.target.value)}
+          >
+            <NativeSelectOption value="added">
+              Recently added
+            </NativeSelectOption>
+            <NativeSelectOption value="observed">
+              Date observed
+            </NativeSelectOption>
+          </NativeSelect>
+        </label>
+      </div>
+      <p className="archive-count" aria-live="polite">
+        {results.length} observing nights · Page {current} of {pages}
+      </p>
+      <div className="archive-grid">
+        {visible.map((n) => (
+          <article
+            key={n.night}
+            className={`archive-card ${n.poster ? '' : 'awaiting-card'}`}
+          >
+            {n.poster ? (
+              <a href={`${base}/archive/${n.night}/`}>
+                <div className="archive-thumb">
+                  <img
+                    src={base + n.poster}
+                    width="360"
+                    height="360"
+                    loading="lazy"
+                    alt={`Star field recorded on ${n.night}`}
+                  />
+                  <span>
+                    {n.n_frames >= 3 ? '▶ Watch sequence' : 'View exposures'}{' '}
+                    <ArrowUpRight size={12} />
+                  </span>
+                </div>
+                <h2>{n.night}</h2>
+              </a>
+            ) : (
+              <>
+                <div className="awaiting-thumb">
+                  {n.availability === 'pending' ? (
+                    <Clock size={24} />
+                  ) : (
+                    <ImageIcon size={24} />
+                  )}
+                  <span>
+                    {n.availability === 'pending'
+                      ? 'Image not yet available'
+                      : 'Awaiting image processing'}
+                  </span>
+                </div>
+                <h2>{n.night}</h2>
+              </>
+            )}
+            <p>
+              {n.count} archive {n.count === 1 ? 'match' : 'matches'} ·{' '}
+              {n.bands.sort().join(' / ')}{' '}
+              {n.bands.length === 1 ? 'band' : 'bands'}
+            </p>
+            <small>
+              {n.published_at
+                ? `Added ${n.published_at.slice(0, 10)}`
+                : n.availability === 'pending'
+                  ? 'Public pixels will be checked again'
+                  : 'Predicted coverage · no detection claimed'}
+            </small>
+          </article>
+        ))}
+      </div>
+      {results.length === 0 && (
+        <div className="empty-state">
+          <h2>No nights match these filters.</h2>
+          <p>Try another year, band, or availability.</p>
+        </div>
+      )}
+      <Pagination className="archive-pagination">
+        <PaginationContent>
+          {Array.from({ length: pages }, (_, i) => i + 1)
+            .filter((n) => n === 1 || n === pages || Math.abs(n - current) <= 2)
+            .map((n) => (
+              <PaginationItem key={n}>
+                <PaginationLink
+                  className="page-link"
+                  href={pageHref(n)}
+                  isActive={n === current}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setPage(n);
+                    document
+                      .querySelector('.archive-filters')
+                      ?.scrollIntoView({ block: 'start' });
+                  }}
+                >
+                  {n}
+                </PaginationLink>
+              </PaginationItem>
+            ))}
+        </PaginationContent>
+      </Pagination>
+    </>
+  );
+}
