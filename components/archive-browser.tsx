@@ -145,7 +145,9 @@ export function ArchiveBrowser({
                   <span>
                     {n.availability === 'pending'
                       ? 'Image not yet available'
-                      : 'Awaiting image processing'}
+                      : n.availability === 'rejected'
+                        ? 'Did not pass image checks'
+                        : 'Awaiting image processing'}
                   </span>
                 </div>
                 <h2>{n.night}</h2>
@@ -161,7 +163,9 @@ export function ArchiveBrowser({
                 ? `Added ${n.published_at.slice(0, 10)}`
                 : n.availability === 'pending'
                   ? 'Public pixels will be checked again'
-                  : 'Predicted coverage · no detection claimed'}
+                  : n.availability === 'rejected'
+                    ? 'Needs review before retrying'
+                    : 'Predicted coverage · no detection claimed'}
             </small>
           </article>
         ))}
