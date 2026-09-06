@@ -209,6 +209,24 @@ def test_all_404s_and_most_timeout_leave_sequences_intact(tmp_path, monkeypatch)
     monkeypatch.setattr(mod, "ROOT", tmp_path)
     before = (tmp_path / "data/animations.json").read_bytes()
     old_watermark = load(tmp_path / "data/state.json")["most_through"]
+    # Keep this outage test independent of the changing production backlog.
+    existing = load(tmp_path / "data/frames.json")
+    for row in existing:
+        row["next_retry_at"] = "9999-01-01T00:00:00Z"
+    table = Table(
+        rows=[
+            {
+                "Image_ID": f"ztf_timeout_{i}_zr",
+                "image_url": f"https://irsa.ipac.caltech.edu/ibe/data/ztf/timeout_{i}.fits",
+                "mjd_obs": 48000 + i / 1440,
+                "date_obs": "1990-04-19",
+                "ra_obj": 1.0,
+                "dec_obj": 2.0,
+            }
+            for i in range(3)
+        ]
+    )
+    write(tmp_path / "data/frames.json", import_candidates(table, "fixture", existing))
 
     def broken(*a, **kw):
         raise UpstreamError("MOST fixture timeout")
@@ -291,3 +309,57 @@ def test_pending_becomes_published_once(tmp_path, monkeypatch):
     result = mod.refresh("images", max_downloads=3, budget_seconds=30)
     assert result["imaging"]["requests"] == 0
     assert load(tmp_path / "data/animations.json") == before
+
+
+def test_quality_rejection_waits_for_review_but_new_frames_still_run(
+    tmp_path, monkeypatch
+):
+    import pipeline.refresh as mod
+
+    monkeypatch.setattr(mod, "ROOT", tmp_path)
+    table = Table(
+        rows=[
+            {
+                "Image_ID": f"ztf_review_{i}_zr",
+                "image_url": f"https://irsa.ipac.caltech.edu/ibe/data/ztf/review_{i}.fits",
+                "mjd_obs": 60000 + i / 1440,
+                "date_obs": "2023-02-25",
+                "ra_obj": 1.0,
+                "dec_obj": 2.0,
+            }
+            for i in range(2)
+        ]
+    )
+    frames = import_candidates(table, "2026-01-01T00:00:00Z")
+    rejected = frames[0]
+    rejected.update(
+        availability="available",
+        quality="rejected",
+        quality_reason="No usable pixels at predicted positions",
+        attempts=1,
+    )
+    write(tmp_path / "data/frames.json", frames)
+    write(tmp_path / "data/animations.json", [])
+    monkeypatch.setattr(mod.sources, "most", lambda *a, **kw: (table, "fixture"))
+    fetch = Mock(return_value=("pending", None, 404))
+    monkeypatch.setattr(mod.sources, "fetch_cutout", fetch)
+
+    result = mod.refresh("images", max_downloads=10, budget_seconds=30)
+    assert result["imaging"]["requests"] == 1
+    assert result["imaging"]["queued"] == 0
+    assert fetch.call_args.args[1]["id"] != rejected["id"]
+    saved = load(tmp_path / "data/frames.json")
+    retained = next(row for row in saved if row["id"] == rejected["id"])
+    assert (
+        retained["attempts"] == 1
+        and retained["quality_reason"] == rejected["quality_reason"]
+    )
+    assert not retained["assets"]
+
+    # An operator can explicitly return a reviewed/corrected frame to the queue.
+    retained["quality"] = "unprocessed"
+    write(tmp_path / "data/frames.json", saved)
+    fetch.reset_mock()
+    result = mod.refresh("images", max_downloads=10, budget_seconds=30)
+    assert result["imaging"]["requests"] == 1
+    assert fetch.call_args.args[1]["id"] == rejected["id"]

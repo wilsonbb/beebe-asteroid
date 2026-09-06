@@ -10,7 +10,7 @@ for (const f of frames) {
       night: f.night,
       count: 0,
       bands: [],
-      availability: 'untried',
+      availability: f.quality === 'rejected' ? 'rejected' : 'untried',
       poster: seq?.poster.url || null,
       n_frames: seq?.n_frames || 0,
       published_at: seq?.published_at || null,
@@ -19,6 +19,9 @@ for (const f of frames) {
   }
   n.count++;
   if (!n.bands.includes(f.band)) n.bands.push(f.band);
+  if (n.availability === 'rejected' && f.quality !== 'rejected') {
+    n.availability = 'untried';
+  }
   if (f.availability === 'pending') n.availability = 'pending';
   if (n.poster) n.availability = 'available';
 }

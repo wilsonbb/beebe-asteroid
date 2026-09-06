@@ -102,6 +102,7 @@ def refresh(mode="fast", max_downloads=100, budget_seconds=1200, reconcile=False
         # Alternate newest and oldest pending nights to avoid permanent backlog starvation.
         due = lambda r: (
             (not r.get("assets") or r["availability"] != "available")
+            and r.get("quality") != "rejected"
             and (not r.get("next_retry_at") or r["next_retry_at"] <= stamp)
         )
         dates = sorted([n for n, rs in by_night.items() if any(due(r) for r in rs)])
