@@ -33,4 +33,4 @@ The earlier Vinext export configuration redirected trailing-slash routes during 
 
 ## Deliberate limits
 
-Scheduled refresh and GitHub Pages deployment need the owner's destination repository and Actions configuration. The separately deployed Sites copy is an owner-only review snapshot. Current quality filtering validates pixels and common sky coverage; it does not automatically identify the asteroid, measure a lightcurve, or certify astrometric registration accuracy. Seasonal opposition predictions and other survey integrations remain deferred as in the build brief.
+GitHub Pages and scheduled refresh are configured in `wilsonbb/beebe-asteroid`. The separate Sites preview upload failed with service timeouts; only its source backup succeeded. Current quality filtering validates pixels and common sky coverage; it does not automatically identify the asteroid, measure a lightcurve, or certify astrometric registration accuracy. Seasonal opposition predictions and other survey integrations remain deferred as in the build brief.

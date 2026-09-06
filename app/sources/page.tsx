@@ -103,10 +103,16 @@ export default function Sources() {
           <h2>Updates & availability</h2>
           <p>
             The pipeline is configured for daily predictions and MPC records,
-            plus twice-weekly image searches and rendering. Schedules only run
-            after GitHub Actions is enabled in the destination repository. Check
-            the timestamps below to see what actually succeeded.
+            plus twice-weekly image searches and rendering through GitHub
+            Actions. Scheduled runs are best effort. Check the timestamps below
+            to see what actually succeeded.
           </p>
+          <a
+            href="https://github.com/wilsonbb/beebe-asteroid/actions/workflows/refresh.yml"
+            className="text-link"
+          >
+            Refresh history ↗
+          </a>
           <p>
             ZTF documents a rolling release window of about 60 days for public
             images; proprietary images take longer. Availability varies. A newly

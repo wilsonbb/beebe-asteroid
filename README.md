@@ -2,7 +2,12 @@
 
 A public-astronomy field journal: real ZTF cutouts, a controllable image player, an evolving archive, and approachable science about asteroid Beebe.
 
-The frontend exports ordinary HTML, CSS, JavaScript and WebP/GIF files. Python does the upstream work on a schedule. Visitors never trigger slow telescope-archive requests. The site can be hosted on GitHub Pages without a running backend; the accompanying Sites deployment is an owner-only review copy.
+The frontend exports ordinary HTML, CSS, JavaScript and WebP/GIF files. Python does the upstream work on a schedule. Visitors never trigger slow telescope-archive requests. The site runs on GitHub Pages without a running backend.
+
+- Website: https://wilsonbb.github.io/beebe-asteroid/
+- Repository and workflow history: https://github.com/wilsonbb/beebe-asteroid
+
+GitHub Pages and the scheduled workflow are enabled. The separate Sites source backup does not run scheduled jobs; its preview upload was blocked by service timeouts.
 
 ## What is here
 
@@ -72,7 +77,7 @@ Original supplied inputs remain unmodified under `archive/original`. They includ
 
 ## Enable GitHub Pages and scheduled updates
 
-A destination GitHub repository must be selected by the owner. The Sites source repository is a separate version store and does not execute GitHub Actions. The checked-in schedules are **not active merely because the review site is deployed**.
+The production repository is `wilsonbb/beebe-asteroid`, with Pages configured to use GitHub Actions and `PAGES_BASE_PATH=/beebe-asteroid`. The following steps document setup for a replacement repository or fork.
 
 1. Create or choose the intended repository, push this repository's `main` branch, and enable Actions. A public repository on GitHub Free is the default no-hosting-charge path.
 2. In **Settings → Pages**, select **GitHub Actions** as the build source.
@@ -81,7 +86,7 @@ A destination GitHub repository must be selected by the owner. The Sites source 
 5. In Actions, run **Refresh and publish Beebe** with `mode: publish` to test the current snapshot, then `all` for a bounded live refresh. Confirm both the commit and the Pages deployment in that same run.
 6. Verify schedules are enabled: fast sources daily at 09:23 UTC; images Tuesday/Friday at 10:41 UTC; one historical reconciliation at 11:17 UTC on the first day of each quarter. GitHub timing is best effort.
 
-Production image updates then publish to **GitHub Pages**. The owner-only Sites review copy remains a saved snapshot unless separately redeployed; it is not secretly wired to a second hosting platform.
+Production image updates publish to **GitHub Pages**. The Sites source backup is independent and does not receive these automated publications.
 
 The refresh workflow shares a concurrency group, does not cancel an in-progress write, validates before committing, and deploys directly after its own commit. It does not rely on a bot push triggering another workflow. If a human pushes concurrently, `git push` fails safely; rerun from the latest `main` rather than force-pushing.
 
