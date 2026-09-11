@@ -2,11 +2,11 @@
   "errors": [],
   "imaging": {
     "new_frames": 0,
-    "pending": 335,
+    "pending": 341,
     "queued": 0,
-    "requests": 0
+    "requests": 15
   },
-  "last_run": "2026-09-11T13:40:38Z",
+  "last_run": "2026-09-11T14:36:52Z",
   "schema_version": 1,
   "sources": {
     "horizons": {
@@ -14,8 +14,8 @@
       "last_success": "2026-09-11T13:40:38Z"
     },
     "most": {
-      "last_attempt": "2026-09-08T14:46:12Z",
-      "last_success": "2026-09-08T14:46:12Z"
+      "last_attempt": "2026-09-11T14:36:52Z",
+      "last_success": "2026-09-11T14:36:52Z"
     },
     "mpc": {
       "last_attempt": "2026-09-11T13:40:38Z",
