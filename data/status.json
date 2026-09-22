@@ -1,12 +1,15 @@
 {
-  "errors": [],
+  "errors": [
+    "render: ValueError: No usable pixels at predicted positions",
+    "render: ValueError: No usable pixels at predicted positions"
+  ],
   "imaging": {
-    "new_frames": 0,
-    "pending": 377,
-    "queued": 214,
+    "new_frames": 11,
+    "pending": 373,
+    "queued": 161,
     "requests": 100
   },
-  "last_run": "2026-09-22T14:06:36Z",
+  "last_run": "2026-09-22T15:10:48Z",
   "schema_version": 1,
   "sources": {
     "horizons": {
@@ -14,8 +17,8 @@
       "last_success": "2026-09-22T14:06:36Z"
     },
     "most": {
-      "last_attempt": "2026-09-18T14:38:22Z",
-      "last_success": "2026-09-18T14:38:22Z"
+      "last_attempt": "2026-09-22T15:10:48Z",
+      "last_success": "2026-09-22T15:10:48Z"
     },
     "mpc": {
       "last_attempt": "2026-09-22T14:06:36Z",
@@ -23,7 +26,7 @@
     },
     "render": {
       "error": "No usable pixels at predicted positions",
-      "last_attempt": "2026-09-06T21:47:08Z"
+      "last_attempt": "2026-09-22T15:10:48Z"
     },
     "sbdb": {
       "last_attempt": "2026-09-22T14:06:36Z",
