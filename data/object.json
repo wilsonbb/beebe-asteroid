@@ -164,7 +164,7 @@
       "value": "2.99603"
     }
   ],
-  "retrieved_at": "2026-09-24T14:16:49Z",
+  "retrieved_at": "2026-09-25T14:40:27Z",
   "schema_version": 1,
   "source": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=20220&discovery=1&phys-par=1&full-prec=1"
 }
