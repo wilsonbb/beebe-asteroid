@@ -1,18 +1,8 @@
 {
   "frame": "ICRF astrometric RA/Dec",
   "observer": "Earth center (500@399)",
-  "retrieved_at": "2026-09-27T14:45:55Z",
+  "retrieved_at": "2026-09-28T17:44:39Z",
   "samples": [
-    {
-      "at": "2026-09-27T00:00:00Z",
-      "dec": "+06 35 13.3",
-      "earth_distance_au": 2.03308222612434,
-      "elongation_deg": 158.2827,
-      "light_minutes": 16.90862928,
-      "ra": "01 37 33.67",
-      "sun_distance_au": 2.987542423602,
-      "v_mag": 18.312
-    },
     {
       "at": "2026-09-28T00:00:00Z",
       "dec": "+06 27 04.5",
@@ -312,11 +302,21 @@
       "ra": "01 15 42.45",
       "sun_distance_au": 2.976399011367,
       "v_mag": 18.182
+    },
+    {
+      "at": "2026-10-28T00:00:00Z",
+      "dec": "+02 15 09.9",
+      "earth_distance_au": 2.01102340463149,
+      "elongation_deg": 163.1403,
+      "light_minutes": 16.72517166,
+      "ra": "01 15 00.09",
+      "sun_distance_au": 2.97598143099,
+      "v_mag": 18.204
     }
   ],
   "schema_version": 1,
   "source": "https://ssd.jpl.nasa.gov/horizons/",
   "time_scale": "UTC",
-  "valid_from": "2026-09-27T00:00:00Z",
-  "valid_until": "2026-10-28T00:00:00Z"
+  "valid_from": "2026-09-28T00:00:00Z",
+  "valid_until": "2026-10-29T00:00:00Z"
 }
