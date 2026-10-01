@@ -6,6 +6,368 @@
       "r"
     ],
     "display_note": "North up; east left. Each exposure is background-normalized and resampled to a common sky grid. Mixed filters can change star brightness.",
+    "field_arcsec": 157.1,
+    "frames": [
+      {
+        "asset": {
+          "bytes": 46690,
+          "height": 360,
+          "sha256": "8f136cec272f09151a366f943ebac71f6db807a5e3b7adead1ba3e6e0968cd3a",
+          "url": "/media/d1ed12ce1907aba0/db64a4e52b32.webp",
+          "width": 360
+        },
+        "at": "2026-08-02T09:38:04.001Z",
+        "band": "r",
+        "id": "ztf_20260802401424_000502_zr_c05_o_q3_sciimg.fits",
+        "marker": {
+          "x": 0.6179961278967667,
+          "y": 0.49482113721348275
+        },
+        "source_url": "https://irsa.ipac.caltech.edu/ibe/data/ztf/products/sci/2026/0802/401424/ztf_20260802401424_000502_zr_c05_o_q3_sciimg.fits"
+      },
+      {
+        "asset": {
+          "bytes": 48226,
+          "height": 360,
+          "sha256": "b04b1a559c8c6ec47927a7aea1c2614f9b5623f7b4953877040def2e1b2cbb44",
+          "url": "/media/d1ed12ce1907aba0/ea1287fbad70.webp",
+          "width": 360
+        },
+        "at": "2026-08-02T10:54:05.999Z",
+        "band": "g",
+        "id": "ztf_20260802454225_000502_zg_c05_o_q3_sciimg.fits",
+        "marker": {
+          "x": 0.47878775982652144,
+          "y": 0.5008483311919536
+        },
+        "source_url": "https://irsa.ipac.caltech.edu/ibe/data/ztf/products/sci/2026/0802/454225/ztf_20260802454225_000502_zg_c05_o_q3_sciimg.fits"
+      },
+      {
+        "asset": {
+          "bytes": 47294,
+          "height": 360,
+          "sha256": "62d4e8b0405b774f39ac99c2e5a670c1ed525a3cb4c4794b98f3ad10943b5805",
+          "url": "/media/d1ed12ce1907aba0/0b6973232f8a.webp",
+          "width": 360
+        },
+        "at": "2026-08-02T11:35:40.998Z",
+        "band": "i",
+        "id": "ztf_20260802483102_000502_zi_c05_o_q3_sciimg.fits",
+        "marker": {
+          "x": 0.4032161124874752,
+          "y": 0.5043305315852162
+        },
+        "source_url": "https://irsa.ipac.caltech.edu/ibe/data/ztf/products/sci/2026/0802/483102/ztf_20260802483102_000502_zi_c05_o_q3_sciimg.fits"
+      }
+    ],
+    "gif": {
+      "bytes": 413619,
+      "height": 360,
+      "sha256": "057e74a433d147c4b40f655c91308366a283b0fca5cba6311bcf53dc260ac35c",
+      "url": "/media/d1ed12ce1907aba0/motion.gif",
+      "width": 360
+    },
+    "id": "2026-08-02",
+    "n_frames": 3,
+    "night": "2026-08-02",
+    "poster": {
+      "bytes": 46690,
+      "height": 360,
+      "sha256": "8f136cec272f09151a366f943ebac71f6db807a5e3b7adead1ba3e6e0968cd3a",
+      "url": "/media/d1ed12ce1907aba0/db64a4e52b32.webp",
+      "width": 360
+    },
+    "published_at": "2026-10-01T17:24:55Z",
+    "revision": "d1ed12ce1907aba0",
+    "span_minutes": 117.6,
+    "updated_at": "2026-10-01T17:24:55Z",
+    "visibility": "unreviewed",
+    "wcs": {
+      "CDELT1": -0.000121229314082,
+      "CDELT2": 0.000121229314082,
+      "CRPIX1": 180.5,
+      "CRPIX2": 180.5,
+      "CRVAL1": 25.452334002225,
+      "CRVAL2": 10.654981024746,
+      "CTYPE1": "RA---TAN",
+      "CTYPE2": "DEC--TAN",
+      "CUNIT1": "deg",
+      "CUNIT2": "deg",
+      "LATPOLE": 10.654981024746,
+      "LONPOLE": 180.0,
+      "MJDREF": 0.0,
+      "RADESYS": "ICRS",
+      "WCSAXES": 2
+    }
+  },
+  {
+    "bands": [
+      "g",
+      "i",
+      "r"
+    ],
+    "display_note": "North up; east left. Each exposure is background-normalized and resampled to a common sky grid. Mixed filters can change star brightness.",
+    "field_arcsec": 176.6,
+    "frames": [
+      {
+        "asset": {
+          "bytes": 51664,
+          "height": 360,
+          "sha256": "6e1a85781082968b777f40e5ba6218fcd72ccaf20b7f1160d5f6138948546502",
+          "url": "/media/3c911a65e2c6c094/47fdab677241.webp",
+          "width": 360
+        },
+        "at": "2026-07-30T08:20:41.004Z",
+        "band": "r",
+        "id": "ztf_20260730347697_000502_zr_c05_o_q3_sciimg.fits",
+        "marker": {
+          "x": 0.6602913521861496,
+          "y": 0.5022208104699291
+        },
+        "source_url": "https://irsa.ipac.caltech.edu/ibe/data/ztf/products/sci/2026/0730/347697/ztf_20260730347697_000502_zr_c05_o_q3_sciimg.fits"
+      },
+      {
+        "asset": {
+          "bytes": 51180,
+          "height": 360,
+          "sha256": "bbe5bc6b17df9fa4cbb59fe091d609d080db8a8eb17416ada5a6de69db4215a4",
+          "url": "/media/3c911a65e2c6c094/2933b6384462.webp",
+          "width": 360
+        },
+        "at": "2026-07-30T09:54:50.000Z",
+        "band": "g",
+        "id": "ztf_20260730413079_000502_zg_c05_o_q3_sciimg.fits",
+        "marker": {
+          "x": 0.48833598083052854,
+          "y": 0.49971593422511573
+        },
+        "source_url": "https://irsa.ipac.caltech.edu/ibe/data/ztf/products/sci/2026/0730/413079/ztf_20260730413079_000502_zg_c05_o_q3_sciimg.fits"
+      },
+      {
+        "asset": {
+          "bytes": 51364,
+          "height": 360,
+          "sha256": "612a3c07153c64889e142db8bf2d5c4ca080d908995b940145405ee02b702fc6",
+          "url": "/media/3c911a65e2c6c094/6464ef15bdfb.webp",
+          "width": 360
+        },
+        "at": "2026-07-30T11:10:43.997Z",
+        "band": "i",
+        "id": "ztf_20260730465775_000502_zi_c05_o_q3_sciimg.fits",
+        "marker": {
+          "x": 0.3513726672883634,
+          "y": 0.49806325531017237
+        },
+        "source_url": "https://irsa.ipac.caltech.edu/ibe/data/ztf/products/sci/2026/0730/465775/ztf_20260730465775_000502_zi_c05_o_q3_sciimg.fits"
+      }
+    ],
+    "gif": {
+      "bytes": 418473,
+      "height": 360,
+      "sha256": "869f4d770c45b21ea0827a6f5bfbdfe434d6de2f57b609eeb4a072678750852c",
+      "url": "/media/3c911a65e2c6c094/motion.gif",
+      "width": 360
+    },
+    "id": "2026-07-30",
+    "n_frames": 3,
+    "night": "2026-07-30",
+    "poster": {
+      "bytes": 51664,
+      "height": 360,
+      "sha256": "6e1a85781082968b777f40e5ba6218fcd72ccaf20b7f1160d5f6138948546502",
+      "url": "/media/3c911a65e2c6c094/47fdab677241.webp",
+      "width": 360
+    },
+    "published_at": "2026-10-01T17:24:55Z",
+    "revision": "3c911a65e2c6c094",
+    "span_minutes": 170.0,
+    "updated_at": "2026-10-01T17:24:55Z",
+    "visibility": "unreviewed",
+    "wcs": {
+      "CDELT1": -0.00013628853161371,
+      "CDELT2": 0.00013628853161371,
+      "CRPIX1": 180.5,
+      "CRPIX2": 180.5,
+      "CRVAL1": 25.065433664932,
+      "CRVAL2": 10.661739063171,
+      "CTYPE1": "RA---TAN",
+      "CTYPE2": "DEC--TAN",
+      "CUNIT1": "deg",
+      "CUNIT2": "deg",
+      "LATPOLE": 10.661739063171,
+      "LONPOLE": 180.0,
+      "MJDREF": 0.0,
+      "RADESYS": "ICRS",
+      "WCSAXES": 2
+    }
+  },
+  {
+    "bands": [
+      "g",
+      "i",
+      "r"
+    ],
+    "display_note": "North up; east left. Each exposure is background-normalized and resampled to a common sky grid. Mixed filters can change star brightness.",
+    "field_arcsec": 159.1,
+    "frames": [
+      {
+        "asset": {
+          "bytes": 47448,
+          "height": 360,
+          "sha256": "e13538aea6a063cf2686fb6e4052ff3f9abca65c2238102a822f644331fd20ca",
+          "url": "/media/cdfe9517068424ce/11adab3b98b9.webp",
+          "width": 360
+        },
+        "at": "2026-07-29T08:46:53.000Z",
+        "band": "r",
+        "id": "ztf_20260729365880_000502_zr_c05_o_q3_sciimg.fits",
+        "marker": {
+          "x": 0.6227495614375941,
+          "y": 0.503628190449733
+        },
+        "source_url": "https://irsa.ipac.caltech.edu/ibe/data/ztf/products/sci/2026/0729/365880/ztf_20260729365880_000502_zr_c05_o_q3_sciimg.fits"
+      },
+      {
+        "asset": {
+          "bytes": 47686,
+          "height": 360,
+          "sha256": "d37726c865ef951710fcbad3f18cb858decb13b3604b93c2e6dfb34e894e2290",
+          "url": "/media/cdfe9517068424ce/f7c5983ae442.webp",
+          "width": 360
+        },
+        "at": "2026-07-29T09:52:52.003Z",
+        "band": "i",
+        "id": "ztf_20260729411713_000502_zi_c05_o_q3_sciimg.fits",
+        "marker": {
+          "x": 0.48492038600977666,
+          "y": 0.4995102780907287
+        },
+        "source_url": "https://irsa.ipac.caltech.edu/ibe/data/ztf/products/sci/2026/0729/411713/ztf_20260729411713_000502_zi_c05_o_q3_sciimg.fits"
+      },
+      {
+        "asset": {
+          "bytes": 47442,
+          "height": 360,
+          "sha256": "53619578d35cbc4de21ea8da33b8102499cec5f8198e0f1006ed0e7e441db22d",
+          "url": "/media/cdfe9517068424ce/7f5c0fb9ef41.webp",
+          "width": 360
+        },
+        "at": "2026-07-29T10:37:32.002Z",
+        "band": "g",
+        "id": "ztf_20260729442708_000502_zg_c05_o_q3_sciimg.fits",
+        "marker": {
+          "x": 0.3923300527311575,
+          "y": 0.49686153146530665
+        },
+        "source_url": "https://irsa.ipac.caltech.edu/ibe/data/ztf/products/sci/2026/0729/442708/ztf_20260729442708_000502_zg_c05_o_q3_sciimg.fits"
+      }
+    ],
+    "gif": {
+      "bytes": 414518,
+      "height": 360,
+      "sha256": "2a688f282c107104f8d6869f8d97821efe24988cea47f7c23f3e97c0936cb61d",
+      "url": "/media/cdfe9517068424ce/motion.gif",
+      "width": 360
+    },
+    "id": "2026-07-29",
+    "n_frames": 3,
+    "night": "2026-07-29",
+    "poster": {
+      "bytes": 47448,
+      "height": 360,
+      "sha256": "e13538aea6a063cf2686fb6e4052ff3f9abca65c2238102a822f644331fd20ca",
+      "url": "/media/cdfe9517068424ce/11adab3b98b9.webp",
+      "width": 360
+    },
+    "published_at": "2026-10-01T17:24:55Z",
+    "revision": "cdfe9517068424ce",
+    "span_minutes": 110.7,
+    "updated_at": "2026-10-01T17:24:55Z",
+    "visibility": "unreviewed",
+    "wcs": {
+      "CDELT1": -0.00012273776603514,
+      "CDELT2": 0.00012273776603514,
+      "CRPIX1": 180.5,
+      "CRPIX2": 180.5,
+      "CRVAL1": 24.929288998281,
+      "CRVAL2": 10.659593362075,
+      "CTYPE1": "RA---TAN",
+      "CTYPE2": "DEC--TAN",
+      "CUNIT1": "deg",
+      "CUNIT2": "deg",
+      "LATPOLE": 10.659593362075,
+      "LONPOLE": 180.0,
+      "MJDREF": 0.0,
+      "RADESYS": "ICRS",
+      "WCSAXES": 2
+    }
+  },
+  {
+    "bands": [
+      "r"
+    ],
+    "display_note": "North up; east left. Each exposure is background-normalized and resampled to a common sky grid. Mixed filters can change star brightness.",
+    "field_arcsec": 150.0,
+    "frames": [
+      {
+        "asset": {
+          "bytes": 45734,
+          "height": 360,
+          "sha256": "ada9d76773e9a50ae19d4ec9100af74d96070bf102209bd5eaaf924911c68532",
+          "url": "/media/de68dbcbe08da287/679a2c59c8e5.webp",
+          "width": 360
+        },
+        "at": "2026-07-25T10:47:14.001Z",
+        "band": "r",
+        "id": "ztf_20260725449456_000502_zr_c06_o_q4_sciimg.fits",
+        "marker": {
+          "x": 0.4999999999999406,
+          "y": 0.5000000000000597
+        },
+        "source_url": "https://irsa.ipac.caltech.edu/ibe/data/ztf/products/sci/2026/0725/449456/ztf_20260725449456_000502_zr_c06_o_q4_sciimg.fits"
+      }
+    ],
+    "gif": null,
+    "id": "2026-07-25",
+    "n_frames": 1,
+    "night": "2026-07-25",
+    "poster": {
+      "bytes": 45734,
+      "height": 360,
+      "sha256": "ada9d76773e9a50ae19d4ec9100af74d96070bf102209bd5eaaf924911c68532",
+      "url": "/media/de68dbcbe08da287/679a2c59c8e5.webp",
+      "width": 360
+    },
+    "published_at": "2026-10-01T17:24:55Z",
+    "revision": "de68dbcbe08da287",
+    "span_minutes": 0.0,
+    "updated_at": "2026-10-01T17:24:55Z",
+    "visibility": "unreviewed",
+    "wcs": {
+      "CDELT1": -0.00011574074074074,
+      "CDELT2": 0.00011574074074074,
+      "CRPIX1": 180.5,
+      "CRPIX2": 180.5,
+      "CRVAL1": 24.3518,
+      "CRVAL2": 10.630473,
+      "CTYPE1": "RA---TAN",
+      "CTYPE2": "DEC--TAN",
+      "CUNIT1": "deg",
+      "CUNIT2": "deg",
+      "LATPOLE": 10.630473,
+      "LONPOLE": 180.0,
+      "MJDREF": 0.0,
+      "RADESYS": "ICRS",
+      "WCSAXES": 2
+    }
+  },
+  {
+    "bands": [
+      "g",
+      "i",
+      "r"
+    ],
+    "display_note": "North up; east left. Each exposure is background-normalized and resampled to a common sky grid. Mixed filters can change star brightness.",
     "field_arcsec": 150.0,
     "frames": [
       {
